@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 30,
         water: 60
     };
-
+    let name= prompt('Enter Your Name :');
     document.querySelectorAll('.sect').forEach(section => {
         const metric = section.dataset.metric;
         const progressBar = section.querySelector('[data-progress]');
