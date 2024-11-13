@@ -1,36 +1,34 @@
-let progress1 = document.getElementById("progress1")
-let progress2 = document.getElementById("progress2") 
-let add1 = document.querySelector("#plus1")
-let subtract1 = document.querySelector("#minus1")
 
-let add2 = document.querySelector("#plus2")
-let subtract2 = document.querySelector("#minus2")
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-progress]').forEach(progressBar => {
+        if (!progressBar.style.width) {
+            progressBar.style.width = '50%';
+        }
+    });
 
-add1.addEventListener('click',()=>{
-    let currentWidth =parseFloat(progress1.style.width);
-   let plus = currentWidth + 5;
-    progress1.style.width = plus +'%';
+    document.querySelectorAll('.sect').forEach(section => {
+        const progressBar = section.querySelector('[data-progress]');
+        
+        section.addEventListener('click', (e) => {
+            const control = e.target.getAttribute('data-control');
+            if (!control) return;
 
-}
-)
-subtract1.addEventListener('click',()=>{
-    let currentWidth =parseFloat(progress1.style.width);
-   let minus = currentWidth - 5;
-    progress1.style.width = minus +'%';
+            let currentWidth = parseFloat(progressBar.style.width) || 50;
+            const change = control === 'increase' ? 5 : -5;
+            
+            const newWidth = Math.min(Math.max(currentWidth + change, 0), 100);
+            
+            progressBar.style.transition = 'width 0.3s ease-in-out';
+            progressBar.style.width = `${newWidth}%`;
 
-}
-)
-add2.addEventListener('click',()=>{
-    let currentWidth =parseFloat(progress2.style.width);
-   let plus = currentWidth + 5;
-    progress2.style.width = plus +'%';
-
-}
-)
-subtract2.addEventListener('click',()=>{
-    let currentWidth =parseFloat(progress2.style.width);
-   let minus = currentWidth - 5;
-    progress2.style.width = minus +'%';
-
-}
-)
+            const heading = section.previousElementSibling;
+            if (heading && heading.tagName === 'H2') {
+                const originalText = heading.getAttribute('data-original-text') || heading.textContent;
+                if (!heading.getAttribute('data-original-text')) {
+                    heading.setAttribute('data-original-text', originalText);
+                }
+                heading.textContent = `${originalText} - ${Math.round(newWidth)}%`;
+            }
+        });
+    });
+});

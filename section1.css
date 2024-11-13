@@ -158,56 +158,57 @@ body
     text-align: center;
     width: 38vw;
 }
-.progressBars
-{
+
+.progressBars {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-        flex-direction: column;
-        gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    gap: 2rem;
 }
-.progressBars h2{
+
+.progressBars h2 {
     color: black;
-}         
+}
+
+.sect {
+    display: flex;
+    gap: 10px;
+}
+
 .bar {
-                    width: 50vw;
-                    background-color: black;
-                    border-radius: 10px;
-                    height: 10vh;
-                    overflow: hidden;
-                    gap: 10px;
-                }
-        
-                .progress {
-                    height: inherit;
-                    transition: all 0.3s ease-in;
-                    background: linear-gradient(to top left, orange, rgba(255, 0, 0));
-                }
-        
-                .edit {
-                    width: 10vh;
-                    background-color: black;
-                    border-radius: 10px;
-                    height: 10vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: x-large;
-                    font-weight: bold;
-                }
-        
-                .edit:hover {
-                    background-color:white;
-                    cursor: pointer;
-                   outline: 0.25px solid rgb(156, 156, 156);
-                    color: rgb(37, 37, 37);
-                }
-        
-                .sect {
-                    display: flex;
-                    gap: 10px;
-                }
+    width: 50vw;
+    background-color: black;
+    border-radius: 10px;
+    height: 10vh;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: all 0.3s ease-in;
+    background: linear-gradient(to top left, orange, rgba(255, 0, 0));
+}
+
+.edit {
+    width: 10vh;
+    background-color: black;
+    border-radius: 10px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.edit:hover {
+    background-color: rgba(20, 20, 20, 0.979);
+}
+
                 #section2 {
                     height: 100vh;
                     display: flex;
