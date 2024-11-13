@@ -1,0 +1,279 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+#header
+{
+    width: 100vw;
+    height:8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position:sticky;
+    top: 0;
+}
+
+#logo
+{
+    margin-left: 2.5rem;
+    font-size: 1.4rem;
+}
+
+#links
+{
+    width: 24rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2.5rem;
+}
+
+.links
+{
+    width: .1rem;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.links:hover
+{
+    color: rgb(255, 255, 0);
+}
+
+#hero
+{
+    width: 100vw;
+    /* border-top: .1rem solid white; */
+    height: 93.7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('./images/section1_img.jpg');
+    /* background-image: ; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-blend-mode: difference; */
+}
+#hero p{
+    font-size:large ;
+    text-align: center;
+    width: 60vw;
+    margin: 1rem;
+    text-shadow: 0 0 8px 10px #ffffff34;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#buttons
+{
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button
+{
+    border-style: none;
+    outline: none;
+    width: 15rem;
+    height: 8vh;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button:hover{
+   color: orange;
+}
+#hero h1{
+    font-size: 3.7rem;
+    font-weight: bold;
+    text-shadow:  8px 10px #1d1d1d28;
+}
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100vw;
+
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(129, 129, 129, 0.473);
+    border-radius: 0.5rem;
+    width: 40vw;
+    gap: 10px;
+    padding: 2rem;
+}
+
+.form h1 {
+    color: rgb(26, 36, 10);
+}
+
+.feild {
+    width: 38vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 0.5px solid rgb(224, 224, 224);
+    padding-left: 5px;
+}
+.feild1 {
+    width: 38vw;
+    height: 10vh;
+    border-radius: 5px;
+    border: 0.5px solid rgb(224, 224, 224);
+    padding-left: 5px;
+}
+.form h4 {
+    font-size: 20px;
+    color: rgb(26, 36, 10);
+    text-align: center;
+    width: 38vw;
+}
+.progressBars
+{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        flex-direction: column;
+        gap: 2rem;
+}
+.progressBars h2{
+    color: black;
+}         
+.bar {
+                    width: 50vw;
+                    background-color: black;
+                    border-radius: 10px;
+                    height: 10vh;
+                    overflow: hidden;
+                    gap: 10px;
+                }
+        
+                .progress {
+                    height: inherit;
+                    transition: all 0.3s ease-in;
+                    background: linear-gradient(to top left, orange, rgba(255, 0, 0));
+                }
+        
+                .edit {
+                    width: 10vh;
+                    background-color: black;
+                    border-radius: 10px;
+                    height: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: x-large;
+                    font-weight: bold;
+                }
+        
+                .edit:hover {
+                    background-color:white;
+                    cursor: pointer;
+                   outline: 0.25px solid rgb(156, 156, 156);
+                    color: rgb(37, 37, 37);
+                }
+        
+                .sect {
+                    display: flex;
+                    gap: 10px;
+                }
+                #section2 {
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    /* background-color: black; */
+                    color: white;
+                }
+        .cards{
+            height: 80vh;
+        }
+                .card {
+                    height: 58vh;
+                    width: 33vw;
+                    background-color: rgb(231, 231, 231);
+                    border-radius: .4rem;
+                    overflow: hidden;
+                box-shadow: 0px 0px 10px rgba(129, 129, 129, 0.692);
+                        transition: all 0.3s ease-in;
+                }
+                .card:hover{
+                    height: 60vh;
+                    width: 35vw;
+                    box-shadow: 0px 0px 20px 8px rgba(27, 27, 27, 0.658);
+                    transition: all 0.3s ease-in;
+                    cursor: pointer;
+                }
+        
+                .cardhead {
+                    font-size: 1.5rem;
+                    height: inherit;
+                    background-color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 10vh;
+        
+                }
+        
+                #card1 {
+                    background-image: url(./images/elena-leya-oMyIkYSc67Q-unsplash.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                #card2 {
+                    background-image: url(./images/pexels-mike-jones-8874368.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+    .form button{
+        width: 15rem;
+        height: 3rem;
+        outline: none;
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: large;
+        font-weight: bold;
+        border-radius: 5px;
+
+    }
+
+        .form button:hover
+{
+    cursor: pointer;
+}
+    .footer{
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
