@@ -64,11 +64,9 @@ body
     align-items: center;
     background-color: black;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('./images/section1_img.jpg');
-    /* background-image: ; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-blend-mode: difference; */
 }
 #hero p{
     font-size:large ;
@@ -97,13 +95,19 @@ body
     height: 8vh;
     font-size: 1.25rem;
     font-weight: bold;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
+    /* background: black;
+    color: white; */
     border-radius: 8px;
+    transition: all 0.3s ease-in;
     cursor: pointer;
 }
 .button:hover{
    color: orange;
+   width: 16rem;
+   transition: all 0.3s ease-in;
+
 }
 #hero h1{
     font-size: 3.7rem;
@@ -209,34 +213,44 @@ body
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
-                    /* background-color: black; */
                     color: white;
                 }
-        .cards{
-            height: 80vh;
-        }
-                .card {
-                    height: 58vh;
-                    width: 33vw;
-                    background-color: rgb(231, 231, 231);
-                    border-radius: .4rem;
-                    overflow: hidden;
-                box-shadow: 0px 0px 10px rgba(129, 129, 129, 0.692);
-                        transition: all 0.3s ease-in;
+                .cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100vw;
+                    justify-content: space-around;
+
+                    /* Adjust gap between cards */
+                    
                 }
-                .card:hover{
-                    height: 60vh;
-                    width: 35vw;
+        
+                .card {
+                    /* flex: 1 1 25%; */
+                    /* Ensure each card takes up 25% of available width */
+                    height: 300px;
+                    background-color: rgb(231, 231, 231);
+                    border-radius: 0.4rem;
+                    box-shadow: 0px 0px 10px rgba(129, 129, 129, 0.692);
+                    transition: all 0.3s ease-in;
+                    min-width: 20em;
+                    overflow: hidden;
+                    margin: 1em;
+                }
+        
+                .card:hover {
+                    flex: 1 1 50%;
+                    height: 350px;
                     box-shadow: 0px 0px 20px 8px rgba(27, 27, 27, 0.658);
                     transition: all 0.3s ease-in;
                     cursor: pointer;
                 }
-        
                 .cardhead {
                     font-size: 1.5rem;
-                    height: inherit;
                     background-color: black;
                     display: flex;
+                    padding-right: 1em;
+                    padding-left: 1em;
                     align-items: center;
                     justify-content: center;
                     height: 10vh;
