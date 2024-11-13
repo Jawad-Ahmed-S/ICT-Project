@@ -247,24 +247,45 @@ body
                     cursor: pointer;
                 }
                 .cardhead {
-                    font-size: 1.5rem;
                     background-color: black;
                     display: flex;
+                    font-size: 1.5rem;
                     padding-right: 1em;
                     padding-left: 1em;
                     align-items: center;
                     justify-content: center;
                     height: 10vh;
-        
                 }
-        
+                .card h3{
+                    font-size: 2.5em;
+                    padding-left: 0.5em;
+                    padding-bottom: 0.5em;
+
+                }
                 #card1 {
-                    background-image: url(./images/elena-leya-oMyIkYSc67Q-unsplash.jpg);
+                    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+                            url('./images/elena-leya-oMyIkYSc67Q-unsplash.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: left;
+                    align-items: flex-end;
+                }
+                #card2 {
+                    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('./images/pexels-mike-jones-8874368.jpg');
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                #card2 {
-                    background-image: url(./images/pexels-mike-jones-8874368.jpg);
+                #card3 {
+                    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('./images/scott-broome-cuOHHP5tx5g-unsplash.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                #card4 {
+                    background:linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('./images/man-2604149_1280.jpg');
                     background-size: cover;
                     background-repeat: no-repeat;
                 }

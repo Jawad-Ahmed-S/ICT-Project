@@ -1,19 +1,21 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-progress]').forEach(progressBar => {
-        if (!progressBar.style.width) {
-            progressBar.style.width = '50%';
-        }
-    });
+    const initialValues = {
+        steps: 75,
+        calories: 30,
+        water: 60
+    };
 
     document.querySelectorAll('.sect').forEach(section => {
+        const metric = section.dataset.metric;
         const progressBar = section.querySelector('[data-progress]');
+        const initialValue = initialValues[metric] || 50;
+        progressBar.style.width = `${initialValue}%`;
         
         section.addEventListener('click', (e) => {
             const control = e.target.getAttribute('data-control');
             if (!control) return;
 
-            let currentWidth = parseFloat(progressBar.style.width) || 50;
+            let currentWidth = parseFloat(progressBar.style.width);
             const change = control === 'increase' ? 5 : -5;
             
             const newWidth = Math.min(Math.max(currentWidth + change, 0), 100);
