@@ -13,6 +13,7 @@ body
 
 li
 {
+     font-size:medium;
     list-style: none;
 }
 
@@ -110,12 +111,13 @@ h2
     justify-content: center;
     align-items: center;
     border-radius:8px;
-
+    flex-direction:coloumn;
 }
 
 p
 {
     padding: 4rem;
+    font-size:initial;
 }
 
 .child
