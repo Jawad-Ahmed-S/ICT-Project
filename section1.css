@@ -334,6 +334,8 @@ body
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: auto;
+        min-width: 100vw;
     }
 @media (max-width:800px) {
     .sect{
